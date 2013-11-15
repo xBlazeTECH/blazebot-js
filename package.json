@@ -1,0 +1,11 @@
+{
+  "name": "blazebot-js",
+  "version": "0.0.1",
+  "private": false,
+  "scripts": {
+    "init": "node blazebot.js"
+  },
+  "dependencies": {
+    "irc": "*"
+  }
+}
