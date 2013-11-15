@@ -1,6 +1,5 @@
 // Make sure that we have everything we need!
 var irc = require('irc');
-var logger = require(__dir'compontents')
 
 console.log('######################################');
 console.log('#  Thank you for using blazebot-js!  #');
@@ -9,9 +8,9 @@ console.log('######################################');
 
 // Configure your IRC bot!
 var config = {
-	channels: ["#davidwalshblog", "#mootools"],
-	server: "irc.freenode.net",
-	botName: "blazebot"
+	channels: ["#xblaze", "#l"],
+	server: "irc.esper.net",
+	botName: "Abigail"
 };
 
 // Create your databases should they not exist.
