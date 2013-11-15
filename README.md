@@ -7,18 +7,8 @@ A node.js based irc bot. It will have modules added to it that will make the bot
 
 To-Do List
 ----------
-[ ] Table Arrangements
+- [ ] Make the IRC bot
 
-[ ] Billing and Payment
+- [ ] Make it Modular
 
-[ ] Reservations (Call In)
-
-[ ] User Authentication with Diff. Roles
-
-[ ] Texts when seat is ready
-
-[ ] Calls when seat is ready
-
-[ ] Mobile menu for use by Patrons
-
-[ ] And more...
+- [ ] And more...
