@@ -1,2 +1,2 @@
 npm install
-node waitress.js
+node blazebot.js
