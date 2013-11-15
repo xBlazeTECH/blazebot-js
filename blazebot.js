@@ -8,48 +8,27 @@ console.log('######################################');
 
 // Configure your IRC bot!
 var config = {
-	channels: ["#xblaze", "#l"],
-	server: "irc.esper.net",
-	botName: "Abigail"
+  channels: ["#xblaze", "#l"],
+  server: "irc.esper.net",
+  nickname: "Abigail",
+  cmdprefix: "!"
 };
 
-// Create your databases should they not exist.
-//var ordersDB = new sqlite3.Database(__dirname + "/system/databases/orders.db");
-
-//  ordersDB.serialize(function() {
-//  usersDB.run("CREATE TABLE orders (id AutoNumber)");
-
-//  var stmt = usersDB.prepare("INSERT INTO lorem VALUES (?)");
-//  for (var i = 0; i < 10; i++) {
-//      stmt.run("Ipsum " + i);
-//  }
-//  stmt.finalize();
-
-//  usersDB.each("SELECT rowid AS id, info FROM lorem", function(err, row) {
-//      console.log(row.id + ": " + row.info);
-//  });
-//});
-
-//usersDB.close();
-
 // Create the bot name
-var bot = new irc.Client(config.server, config.botName, {
-	channels: config.channels
+var bot = new irc.Client(config.server, config.nickname, {
+  channels: config.channels
 });
 
 // Listen for joins
 bot.addListener("join", function(channel, who) {
-	// Welcome them in!
-	bot.say(channel, who + "...dude...welcome back!");
-});
-
-// Listen for any message, PM said user when he posts
-bot.addListener("message", function(from, to, text, message) {
-	bot.say(from, "¿Que?");
+  // Welcome them in!
+  bot.say(channel, who + "Welcome back " + who + "!");
 });
 
 // Listen for any message, say to him/her in the room
 bot.addListener("message", function(from, to, text, message) {
-	bot.say(config.channels[0], "¿Public que?");
+  if(message == config.cmdprefix + "test")
+  bot.say(config.channels[0], "¿Public que?");
+  bot.say(config.channels[1], "¿Public que?");
 });
 
