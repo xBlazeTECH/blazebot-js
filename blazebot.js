@@ -27,8 +27,9 @@ bot.addListener("join", function(channel, who) {
 
 // Listen for any message, say to him/her in the room
 bot.addListener("message", function(from, to, text, message) {
-  if(message == config.cmdprefix + "test")
-  bot.say(config.channels[0], "¿Public que?");
-  bot.say(config.channels[1], "¿Public que?");
+  if(message == config.cmdprefix + "test") {
+    bot.say(config.channels[0], "¿Public que?");
+    bot.say(config.channels[1], "¿Public que?");
+  }
 });
 
